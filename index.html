@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Pendu</title>
+</head>
+<body>
+    <header>
+    <h1 id="first">Pendu</h1>
+        <div id="difficult">
+        <button class="style">Facile</button>
+        <button class="style">Moyen</button>
+        <button class="style">Difficile</button>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <p id="fait">Fait avec du js</p>
+        <p id="lettres"></p>
+            <form id="form" action="#"> 
+                    <input class="prompt" id="prompt" type="text" />
+                    <input class="in-button" type="button" value="Confirmer" onclick="goodword()">
+            </form>
+            <p id="use">Lettres utilisées:</p>
+    </main>
+</body>
+<script src="js/pendu.js"></script>
+</html>

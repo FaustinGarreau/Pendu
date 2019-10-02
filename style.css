@@ -1,0 +1,59 @@
+body {
+    background-image: url(http://www.lacorneduboisdespendus.be/wp-content/uploads/2018/02/Team-page-background-img.jpg);
+}
+
+#first {
+    font-size: 70px;
+    text-align: center;
+    color: deepskyblue;
+}
+
+#difficult {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.style {
+    border:none;
+	padding:12px 0 12px 0;
+	border-radius:8px;
+	background:#d34836;
+	font:bold 13px Arial;
+    color:#fff;
+    width:140px;
+}
+
+#fait {
+    text-align: center;
+    font-size: 2em;
+}
+
+input {
+    text-align: center;
+    border: 1px solid white;
+    box-sizing: border-box;
+    padding: 30px;
+    font-size: 20px;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+}
+
+.in-button {
+    background-color: #d34836;
+    color: #fff;
+}
+
+#use {
+    text-align: center;
+    font-size: 30px;
+}
+
+#lettres {
+    text-align: center;
+    font-size: 30px;
+}
+
