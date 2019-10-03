@@ -7,6 +7,7 @@ var tab  =  [];
 for (i in lettres) {
     tab.push("_");
 }
+fait.innerText = "tu as 10 chances et le mot contient "+lettres.length+" "+"lettres"; 
 
 console.log(random);
 
@@ -59,7 +60,7 @@ function goodword() {
     }
     if (!already){
         miss--;
-        fait.innerText = "Tu as " + miss + " " + "chances"; 
+        fait.innerText = "Tu as "+miss+" "+"chances "+ "et le mot contient "+lettres.length+" "+"lettres";
     }
     if (tab.join(" ") == lettres.join(" ")) {
         document.getElementById("won").style.display = "block";
