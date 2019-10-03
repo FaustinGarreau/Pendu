@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+    <div id="cacher">
     <h1 id="first">Pendu</h1>
         <div id="difficult">
         <button class="style">Facile</button>
@@ -16,12 +17,17 @@
         <button class="style">Difficile</button>
         </div>
         <hr>
+    </div>
     </header>
     <main>
-        <p id="fait">Tu as 5 chances</p>
+        <p id="fait">Tu as 10 chances</p>
         <p id="lettres"></p>
-            <form id="form" action="#"> 
-                    <input class="prompt" id="prompt" type="text" maxlength="1"/>
+    <div id="flex">
+        <p id="won">Bravo tu as réussi par contre c'est le niveau facile donc prend pas la confiance</p>
+        <button id="begin" onclick="window.location.reload()">bien joué</button >
+    </div>
+            <form id="form" action="#" > 
+                    <input class="prompt" id="prompt" type="text" maxlength="7"/>
                     <input class="in-button" type="button" value="Confirmer" onclick="goodword()">
             </form>
             <p id="use">Lettres utilisées:</p>

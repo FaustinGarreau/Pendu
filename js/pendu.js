@@ -7,16 +7,29 @@ var tab  =  [];
 for (i in lettres) {
     tab.push("_");
 }
+
 console.log(random);
+
 var ban = [];
-var miss = 5;
+var miss = 10;
 var chances = document.getElementById("fait");
+var allLetter = [];
 function goodword() {
+    if (tab.join(" ") == lettres.join(" ")) {
+        document.getElementById("won").style.display = "block";
+        document.getElementById("flex").style.display = "block";
+        document.getElementById("cacher").style.display = "none";
+        document.getElementById("fait").style.display = "none";
+        document.getElementById("lettres").style.display = "none";
+        document.getElementById("form").style.display = "none";
+        document.getElementById("use").style.display = "none";
+}
     if (miss == 0) {
-        alert("lost");
+        alert("Dommage pour toi mais tu as perdu tu peux recommencer");
         window.location.reload();
         return;
     }
+
     var input = document.getElementsByClassName("prompt")[0].value;
     var affiche = document.getElementById("lettres");
     var stock = input.split('');
@@ -24,23 +37,39 @@ function goodword() {
     var already = false;
     var non = [];
         for (y in stock) {
+            allLetter.push(stock[y]);
+            console.log(allLetter);
+            
+            use.innerText = "Lettres utilisées:"+ " " +allLetter.join(", ");
         for (let i = 0; i < lettres.length; i++) {
+            
             if (stock[y] == lettres[i] && !ban.includes(lettres[i]) ) {  
                 non.push(lettres[i]);
                 already = true;
 
-
+                
                 tab[i] = lettres[i];
                 affiche.innerText = tab.join(" ");
 
             }
+        
         }
+        
         
     }
     if (!already){
         miss--;
         fait.innerText = "Tu as " + miss + " " + "chances"; 
     }
+    if (tab.join(" ") == lettres.join(" ")) {
+        document.getElementById("won").style.display = "block";
+        document.getElementById("flex").style.display = "block";
+        document.getElementById("cacher").style.display = "none";
+        document.getElementById("fait").style.display = "none";
+        document.getElementById("lettres").style.display = "none";
+        document.getElementById("form").style.display = "none";
+        document.getElementById("use").style.display = "none";
+}
     ban = ban.concat(non);
     console.log(ban);
 }

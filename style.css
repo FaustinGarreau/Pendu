@@ -33,7 +33,7 @@ input {
     text-align: center;
     border: 1px solid white;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 12px;
     font-size: 20px;
 }
 
@@ -56,4 +56,35 @@ input {
     text-align: center;
     font-size: 30px;
 }
+
+#begin {
+    border:none;
+	padding:12px 0 12px 0;
+	border-radius:8px;
+	background:#d34836;
+	font:bold 13px Arial;
+    color:#fff;
+    width:140px;
+}
+
+#flex {
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#won {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
+
 
