@@ -16,6 +16,7 @@ var miss = 10;
 var chances = document.getElementById("fait");
 var allLetter = [];
 function goodword() {
+    document.getElementsByClassName("prompt")[0].value = "";
     if (tab.join(" ") == lettres.join(" ")) {
         document.getElementById("won").style.display = "block";
         document.getElementById("flex").style.display = "block";
@@ -48,7 +49,6 @@ function goodword() {
                 non.push(lettres[i]);
                 already = true;
 
-                
                 tab[i] = lettres[i];
                 affiche.innerText = tab.join(" ");
 
