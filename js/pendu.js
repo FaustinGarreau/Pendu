@@ -7,7 +7,7 @@ var tab  =  [];
 for (i in lettres) {
     tab.push("_");
 }
-fait.innerText = "tu as 10 chances et le mot contient "+lettres.length+" "+"lettres"; 
+fait.innerText = "tu as 10 chances"; 
 
 console.log(random);
 
@@ -16,7 +16,7 @@ var miss = 10;
 var chances = document.getElementById("fait");
 var allLetter = [];
 function goodword() {
-    document.getElementsByClassName("prompt")[0].value = "";
+    
     if (tab.join(" ") == lettres.join(" ")) {
         document.getElementById("won").style.display = "block";
         document.getElementById("flex").style.display = "block";
@@ -38,13 +38,23 @@ function goodword() {
     
     var already = false;
     var non = [];
+        for (i in stock) {
+            if (allLetter.includes(stock[i])) {
+                alert("T'es con ou tu les fait exprès tu ne peux pas mettre 2 fois la même lettre");
+                document.getElementsByClassName("prompt")[0].value = "";
+
+                return;
+            }
+        }
         for (y in stock) {
             allLetter.push(stock[y]);
-            console.log(allLetter);
-            
+            //console.log(allLetter);
+
             use.innerText = "Lettres utilisées:"+ " " +allLetter.join(", ");
         for (let i = 0; i < lettres.length; i++) {
             
+            
+
             if (stock[y] == lettres[i] && !ban.includes(lettres[i]) ) {  
                 non.push(lettres[i]);
                 already = true;
@@ -55,13 +65,14 @@ function goodword() {
             }
         
         }
-        
+        document.getElementsByClassName("prompt")[0].value = "";
         
     }
     if (!already){
         miss--;
-        fait.innerText = "Tu as "+miss+" "+"chances "+ "et le mot contient "+lettres.length+" "+"lettres";
+        fait.innerText = "Tu as "+miss+" "+"chances ";
     }
+   
     if (tab.join(" ") == lettres.join(" ")) {
         document.getElementById("won").style.display = "block";
         document.getElementById("flex").style.display = "block";
@@ -71,6 +82,7 @@ function goodword() {
         document.getElementById("form").style.display = "none";
         document.getElementById("use").style.display = "none";
 }
+
     ban = ban.concat(non);
-    console.log(ban);
+    //console.log(ban);
 }
